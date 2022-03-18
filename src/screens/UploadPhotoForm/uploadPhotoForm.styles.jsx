@@ -44,8 +44,12 @@ export const StyledDiv = styled.div`
             height: 50px;
         }
         .btn-select-file{
-            padding: 3px 10px;
+            padding: 5px 10px;
             margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #007bff;
+            color: #fff;
         }
     }
     .media-preview{

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StripeFormContainer = styled.div`
-    flex: 1;
 
     .form-group {
         margin: 0 0 20px;
@@ -9,7 +8,7 @@ export const StripeFormContainer = styled.div`
         border-style: none;
         background-color: rgba(107, 0, 155, 0.6);
         will-change: opacity, transform;
-        box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ccc;
+        // box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ccc;
         border-radius: 4px;
 
         .form-row {
@@ -18,7 +17,7 @@ export const StripeFormContainer = styled.div`
             // -ms-flex-align: center;
             // align-items: center;
             margin-left: 15px;
-            border-top: 1px solid #ccc;
+            // border-top: 1px solid #ccc;
         }
     }
 

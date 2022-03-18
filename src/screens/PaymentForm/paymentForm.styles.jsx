@@ -26,4 +26,8 @@ export const BillingDetailsContainer = styled.div`
             // flex-direction: column;
         }
     }
+    .promo-payment-wrp{
+        flex: 1;
+        padding-left: 20px;
+    }
 `;

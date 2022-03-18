@@ -29,7 +29,7 @@ const CARD_OPTIONS = {
 };
 
 const CardField = ({onChange}) => (
-  <div className="FormRow">
+  <div className="form-row">
     <CardElement options={CARD_OPTIONS} onChange={onChange} />
   </div>
 );
@@ -139,7 +139,6 @@ class StripeContainer extends React.Component {
       <StripeFormContainer>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <div className="form-row">
               <CardField
                 onChange={(event) => {
                   this.setState({
@@ -148,7 +147,6 @@ class StripeContainer extends React.Component {
                   });
                 }}
               />
-            </div>
           </div>
           {error && <ErrorMessage>{error.message}</ErrorMessage>}
           <SubmitButton processing={processing} error={error} disabled={!stripe}>
