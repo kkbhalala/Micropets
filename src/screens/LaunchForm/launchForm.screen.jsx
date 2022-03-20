@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Custom-button/custom-button.component";
 import {ImageContainer} from "../../components/ImageContainer/ImageContainer.component";
+import {Input} from "../../components/Input/input.component";
 
 import { LaunchFormContainer } from "./launchForm.styles";
 import { Typography, PageMainContainer } from "../LandingPage/LandingPage.styles";
@@ -97,29 +98,29 @@ const LaunchForm = () => {
                     </Typography>
                     <form onSubmit={handleSubmit}>
                         <div><span>First Name</span>
-                            <input required type='text' onChange={handleFirstNameChange} label='First name' name='firstname' value={firstName} />
+                            <Input required type='text' onChange={handleFirstNameChange} label='First name' name='firstname' value={firstName} />
                         </div>
                         <div><span>Last Name</span>
-                            <input required type='text' onChange={handleLastNameChange} label='Last name' name='lastname' value={lastName} />
+                            <Input required type='text' onChange={handleLastNameChange} label='Last name' name='lastname' value={lastName} />
                         </div>
                         <div className="address1"><span>Address 1</span>
-                            <input required type='text' onChange={handleAddress1Change} label='Address 1' name='address1' value={address1} />
+                            <Input required type='text' onChange={handleAddress1Change} label='Address 1' name='address1' value={address1} />
                         </div>
                         <div className="address2"><span>Address 2</span>
-                            <input  type='text' onChange={handleAddress2Change} label='Adress 2' name='address2' value={address2} />
+                            <Input  type='text' onChange={handleAddress2Change} label='Adress 2' name='address2' value={address2} />
                         </div>
                         <div><span>City</span>
-                            <input required type='text' label='City' onChange={handleCityChange} name='city' value={city} />
+                            <Input required type='text' label='City' onChange={handleCityChange} name='city' value={city} />
                         </div>
                         <div><span>State</span>
-                            <input required type='text' label='State' onChange={handleStateChange} name='state' value={state} />
+                            <Input required type='text' label='State' onChange={handleStateChange} name='state' value={state} />
                         </div>
                         <div><span>Zip Code</span>
-                            <input required type='number' label='zipcode' onChange={handleZipCodeChange} name='zipcode' value={zipCode} />
+                            <Input required type='number' label='zipcode' onChange={handleZipCodeChange} name='zipcode' value={zipCode} />
                         </div>
 
                         <div><span>Email</span>
-                            <input type='email' required label='Email' onChange={handleEmailChange} value={email} />
+                            <Input type='email' required label='Email' onChange={handleEmailChange} value={email} />
                         </div>
 
                         {/* <CustomButton type='submit' > UPLOAD PHOTO </CustomButton> */}

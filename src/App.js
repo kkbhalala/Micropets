@@ -4,6 +4,7 @@ import { GridLoader } from 'react-spinners';
 import { GlobalStyle } from './global.styles';
 import { LandingPage } from './screens/LandingPage/LandingPage.screen';
 import PaymentForm from './screens/PaymentForm/paymentForm.screen';
+import { Login } from './screens/Login/login.screen';
 import { UserProvider } from './contexts/userContext';
 import './App.css';
 
@@ -37,9 +38,8 @@ function App() {
         element = { < PhotoUploadForm / > }
         />  <
         Route exact path = '/admin/login'
-        element = { < PhotoUploadForm / > }
-        />  <
-        /
+        element = { < Login / > }
+        />  < /
         Routes > <
         /Suspense> < /
         div >

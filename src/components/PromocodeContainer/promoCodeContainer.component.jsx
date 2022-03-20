@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PromoContainer } from './promoCodeContainer.styles';
 import CustomButton from '../../components/Custom-button/custom-button.component';
+import { Input } from '../../components/Input/input.component';
 
 const PromocodeContainer = () => {
     const [promoCode, setPromoCode] = useState('');
@@ -13,7 +14,7 @@ const PromocodeContainer = () => {
         <PromoContainer>
             <div className="promo-text">
                 <span>Promo Code</span>
-                <input required type='text' onChange={handlePromoChange} label='Promo Code' name='promo' value={promoCode} />
+                <Input required type='text' onChange={handlePromoChange} label='Promo Code' name='promo' value={promoCode} />
             </div>
             <CustomButton  type='button'  > Verify Promo Code </CustomButton>
         </PromoContainer>
