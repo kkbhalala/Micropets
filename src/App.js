@@ -35,7 +35,11 @@ function App() {
         /> <
         Route exact path = '/upload-photo-form'
         element = { < PhotoUploadForm / > }
-        /> < /
+        />  <
+        Route exact path = '/admin/login'
+        element = { < PhotoUploadForm / > }
+        />  <
+        /
         Routes > <
         /Suspense> < /
         div >
