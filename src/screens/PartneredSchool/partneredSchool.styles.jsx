@@ -9,7 +9,7 @@ export const PartneredSchoolFormContainer = styled.div`
     padding: 0 30px;
 
     .login-form{
-        width: 30%;
+        width: 40%;
         padding: 30px;
         background-color: rgba(107,0,155,0.6);
         border-radius: 15px;
