@@ -1,30 +1,30 @@
 import React from "react";
-import { LoginContainer, LoginFormContainer } from './login.styles';
+import { PartneredSchoolFormContainer, FormContainer } from './partneredSchool.styles';
 import { Typography } from '../LandingPage/LandingPage.styles';
 import { Input } from '../../components/Input/input.component';
 import { CustomButton } from '../../components/Custom-button/custom-button.component';
 
-export const Login = () => {
+export const PartneredSchool = () => {
     return (
-        <LoginContainer>
+        <PartneredSchoolFormContainer>
             <div className="login-form">
                 <Typography>
-                    Login below
+                    Personal Promo Code
                 </Typography>
-                <LoginFormContainer>
+                <FormContainer>
                     <form onSubmit={() => {}}>
                         <div>
-                            <span>Email</span>
+                            <span>Email Address</span>
                             <Input required type='text' label='Email' name='email' />
                         </div>
                         <div>
-                            <span>Password</span>
-                            <Input required type='text' label='Password' name='password' />
+                            <span>School Code</span>
+                            <Input required type='text' label='SchoolCode' name='schoolCode' />
                         </div>
-                        <CustomButton  type='submit'  > Login </CustomButton>
+                        <CustomButton type='submit'> Generate Promo Code </CustomButton>
                     </form>
-                </LoginFormContainer>
+                </FormContainer>
             </div>
-        </LoginContainer>
+        </PartneredSchoolFormContainer>
     )
 }

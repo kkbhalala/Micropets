@@ -29,7 +29,7 @@ export const LandingPage = () => {
                     </Typography>
                     <CustomButtonContainer>
                         <CustomButton onClick={() => { navigate('/launch-form') }} > RESERVE YOUR SPACE </CustomButton>
-                        <CustomButton onClick={() => { navigate('/launch-form') }} > PARTNERED SCHOOL? </CustomButton>
+                        <CustomButton onClick={() => { navigate('/partnered-school') }} > PARTNERED SCHOOL? </CustomButton>
                     </CustomButtonContainer>
                 </div>
             </UserInputContaier>

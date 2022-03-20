@@ -5,6 +5,7 @@ import { GlobalStyle } from './global.styles';
 import { LandingPage } from './screens/LandingPage/LandingPage.screen';
 import PaymentForm from './screens/PaymentForm/paymentForm.screen';
 import { Login } from './screens/Login/login.screen';
+import { PartneredSchool } from './screens/PartneredSchool/partneredSchool.screen';
 import { UserProvider } from './contexts/userContext';
 import './App.css';
 
@@ -39,7 +40,10 @@ function App() {
         />  <
         Route exact path = '/admin/login'
         element = { < Login / > }
-        />  < /
+        /> <
+        Route exact path = '/partnered-school'
+        element = { < PartneredSchool / > }
+        />   < /
         Routes > <
         /Suspense> < /
         div >

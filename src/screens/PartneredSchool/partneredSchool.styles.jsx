@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoginContainer = styled.div`
+export const PartneredSchoolFormContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,10 +20,11 @@ export const LoginContainer = styled.div`
         @media screen and (max-width: 650px) {
             width: 100%;
         }
+
     }
 `;
 
-export const LoginFormContainer = styled.div`
+export const FormContainer = styled.div`
     form{
         display: flex;
         flex-direction: column;
@@ -36,8 +37,11 @@ export const LoginFormContainer = styled.div`
 
         button {
             margin-top: 15px;
+            @media screen and (max-width: 576px) {
+                font-size: 14px;
+                padding: 0 10px;
+            }
         }
 
     }    
-
 `;
