@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import CustomButton from "../../components/Custom-button/custom-button.component";
+import { useNavigate, Link } from "react-router-dom";
+import CustomButton from "../../components/CustomButton/CustomButton.component";
 import {ImageContainer} from "../../components/ImageContainer/ImageContainer.component";
-import {Input} from "../../components/Input/input.component";
+import {Input} from "../../components/Input/Input.component";
 
-import { LaunchFormContainer } from "./launchForm.styles";
+import { LaunchFormContainer } from "./LaunchForm.styles";
 import { Typography, PageMainContainer } from "../LandingPage/LandingPage.styles";
 import { UserContext } from "../../contexts/userContext";
 
@@ -90,6 +90,7 @@ const LaunchForm = () => {
 
     return (
         <PageMainContainer>
+            <Link className="btn-back" to="/">Back</Link>
             <ImageContainer />
             <LaunchFormContainer>
                 <div className="form-container">

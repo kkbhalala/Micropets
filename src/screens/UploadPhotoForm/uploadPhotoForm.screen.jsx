@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import Dropzone from 'react-dropzone';
 import CloudIcon from '../../assets/images/cloud-computing.png';
-import { PhotoUploadFormContainer, StyledDiv } from './uploadPhotoForm.styles';
+import { PhotoUploadFormContainer, StyledDiv } from './UploadPhotoForm.styles';
 
 const PhotoUploadForm = () => {
     const [isError, setIsError] = useState('');

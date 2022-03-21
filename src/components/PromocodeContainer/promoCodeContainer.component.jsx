@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { PromoContainer } from './promoCodeContainer.styles';
-import CustomButton from '../../components/Custom-button/custom-button.component';
-import { Input } from '../../components/Input/input.component';
+import { PromoContainer } from './PromoCodeContainer.styles';
+import CustomButton from '../CustomButton/CustomButton.component';
+import { Input } from '../Input/Input.component';
 
 const PromocodeContainer = () => {
     const [promoCode, setPromoCode] = useState('');

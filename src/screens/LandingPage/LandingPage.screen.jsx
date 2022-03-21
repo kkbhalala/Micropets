@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import CustomButton from "../../components/Custom-button/custom-button.component";
+import CustomButton from "../../components/CustomButton/CustomButton.component";
 import { 
         PageMainContainer, 
          Typography, 

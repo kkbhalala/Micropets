@@ -6,7 +6,7 @@ export const PartneredSchoolFormContainer = styled.div`
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    padding: 0 30px;
+    margin: 20px;
 
     .login-form{
         width: 40%;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CustomInputContainer } from './input.styles';
+import { CustomInputContainer } from './Input.styles';
 
 export const Input = ({ ...props }) => (
   <CustomInputContainer {...props} />

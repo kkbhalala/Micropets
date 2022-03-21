@@ -20,6 +20,12 @@ export const GlobalStyle = createGlobalStyle `
 		width: 100%;
 		padding: 11px 15px 11px 0;
 	}
-   
+	.btn-back {
+		position: absolute;
+		padding: 8px 15px;
+		top: 10px;
+		left: 30px;
+		background-color: #fff;
+	}
 
 `;

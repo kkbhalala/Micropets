@@ -1,10 +1,15 @@
 import React from "react";
-import { LoginContainer, LoginFormContainer } from './login.styles';
+import { useNavigate } from "react-router-dom";
+import { LoginContainer, LoginFormContainer } from './Login.styles';
 import { Typography } from '../LandingPage/LandingPage.styles';
-import { Input } from '../../components/Input/input.component';
-import { CustomButton } from '../../components/Custom-button/custom-button.component';
+import { Input } from '../../components/Input/Input.component';
+import { CustomButton } from '../../components/CustomButton/CustomButton.component';
 
 export const Login = () => {
+    let navigate = useNavigate();
+    const handleSubmit = () => {
+        navigate('/dashboard');
+    }
     return (
         <LoginContainer>
             <div className="login-form">
@@ -12,7 +17,7 @@ export const Login = () => {
                     Login below
                 </Typography>
                 <LoginFormContainer>
-                    <form onSubmit={() => {}}>
+                    <form onSubmit={handleSubmit}>
                         <div>
                             <span>Email</span>
                             <Input required type='text' label='Email' name='email' />
@@ -21,7 +26,7 @@ export const Login = () => {
                             <span>Password</span>
                             <Input required type='text' label='Password' name='password' />
                         </div>
-                        <CustomButton  type='submit'  > Login </CustomButton>
+                        <CustomButton type='submit'> Login </CustomButton>
                     </form>
                 </LoginFormContainer>
             </div>

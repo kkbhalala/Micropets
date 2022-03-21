@@ -2,11 +2,11 @@ import React, {useState, useContext} from "react";
 import { Elements, ElementsConsumer } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import StripeContainer from "../../components/StripeContainer/StripeContainer.component";
-import PhotoUploadForm from "../../screens/UploadPhotoForm/uploadPhotoForm.screen";
-import {PaymentFormContainer, BillingDetailsContainer} from './paymentForm.styles';
+import PhotoUploadForm from "../UploadPhotoForm/UploadPhotoForm.screen";
+import {PaymentFormContainer, BillingDetailsContainer} from './PaymentForm.styles';
 import {UserContext} from '../../contexts/userContext';
-import Checkbox from "../../components/Checkbox/checkbox.component";
-import PromocodeContainer from "../../components/PromocodeContainer/promoCodeContainer.component";
+import Checkbox from "../../components/Checkbox/Checkbox.component";
+import PromocodeContainer from "../../components/PromocodeContainer/PromoCodeContainer.component";
 
 const PUBLIC_KEY = 'pk_test_51KaQLBFbFIhjglaIKhPrh02O260VioC4tHo83rN5IKQHqjcTfGZgmZjbRU9ScI5a4Ix2C8QG9jK57V8vFmJcxGug00qU8womln';
 const stripePromise = loadStripe(PUBLIC_KEY);

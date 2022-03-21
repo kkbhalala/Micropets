@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { PartneredSchoolFormContainer, FormContainer } from './partneredSchool.styles';
+import { useNavigate, Link } from "react-router-dom";
+import { PartneredSchoolFormContainer, FormContainer } from './PartneredSchool.styles';
 import { Typography } from '../LandingPage/LandingPage.styles';
-import { Input } from '../../components/Input/input.component';
-import { CustomButton } from '../../components/Custom-button/custom-button.component';
+import { Input } from '../../components/Input/Input.component';
+import { CustomButton } from '../../components/CustomButton/CustomButton.component';
 
 export const PartneredSchool = () => {
     let navigate = useNavigate();
@@ -12,6 +12,7 @@ export const PartneredSchool = () => {
     }
     return (
         <PartneredSchoolFormContainer>
+            <Link className="btn-back" to="/">Back</Link>
             <div className="login-form">
                 <Typography>
                     Personal Promo Code
