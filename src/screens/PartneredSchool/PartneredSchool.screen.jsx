@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { PartneredSchoolFormContainer, FormContainer } from './PartneredSchool.styles';
 import { Typography } from '../LandingPage/LandingPage.styles';
 import { Input } from '../../components/Input/Input.component';
@@ -12,7 +12,7 @@ export const PartneredSchool = () => {
     }
     return (
         <PartneredSchoolFormContainer>
-            <Link className="btn-back" to="/">Back</Link>
+            <CustomButton onClick={() => navigate('/')} className="btn-back" to="/">Back</CustomButton>
             <div className="login-form">
                 <Typography>
                     Personal Promo Code

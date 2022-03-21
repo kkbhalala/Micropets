@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/CustomButton/CustomButton.component";
 import {ImageContainer} from "../../components/ImageContainer/ImageContainer.component";
 import {Input} from "../../components/Input/Input.component";
@@ -90,7 +90,7 @@ const LaunchForm = () => {
 
     return (
         <PageMainContainer>
-            <Link className="btn-back" to="/">Back</Link>
+            <CustomButton onClick={() => navigate('/')} className="btn-back" to="/">Back</CustomButton>
             <ImageContainer />
             <LaunchFormContainer>
                 <div className="form-container">
