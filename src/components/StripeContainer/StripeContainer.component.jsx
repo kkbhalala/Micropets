@@ -2,6 +2,7 @@ import React from "react";
 // import { useNavigate } from "react-router-dom";
 import { CardElement } from "@stripe/react-stripe-js";
 // import CustomButton from "../Custom-button/custom-button.component";
+import {UserContext} from '../../contexts/userContext';
 import {StripeFormContainer} from "./StripeContainer.styles";
 
 const CARD_OPTIONS = {
@@ -69,6 +70,7 @@ const DEFAULT_STATE = {
 };
 
 class StripeContainer extends React.Component {
+  static contextType = UserContext;
   constructor(props) {
     super(props);
     this.state = DEFAULT_STATE;
@@ -122,6 +124,7 @@ class StripeContainer extends React.Component {
   render() {
     const {error, processing, paymentMethod} = this.state;
     const {stripe} = this.props;
+    const {thumbLength} = this.context;
     return paymentMethod ? (
       <StripeFormContainer>
         <div className="result">
@@ -150,7 +153,7 @@ class StripeContainer extends React.Component {
           </div>
           {error && <ErrorMessage>{error.message}</ErrorMessage>}
           <SubmitButton processing={processing} error={error} disabled={!stripe}>
-            Pay
+            {`Pay - $${10 * thumbLength}`}
           </SubmitButton>
         </form>
       </StripeFormContainer>

@@ -11,6 +11,7 @@ export const UserProvider = ({children}) => {
     const [state, setState] = useState("");
     const [zipCode, setZipCode] = useState("");
     const [email, setEmail] = useState("");
+    const [thumbLength, setThumbLength] = useState(0);
 
     return(
         <UserContext.Provider value={{
@@ -29,7 +30,9 @@ export const UserProvider = ({children}) => {
             zipCode,
             setZipCode,
             email,
-            setEmail
+            setEmail,
+            thumbLength,
+            setThumbLength
         }}>
             {children}
         </UserContext.Provider>

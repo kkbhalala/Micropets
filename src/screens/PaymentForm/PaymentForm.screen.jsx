@@ -39,7 +39,7 @@ export default function PaymentForm () {
               <p className="field-detail">First Name: <span>{userData.firstName}</span></p>
               <p className="field-detail">Last Name: <span>{userData.lastName}</span></p>
               <p className="field-detail">Street Address1: <span>{userData.address1}</span></p>
-              <p className="field-detail">Street Address2: <span>{userData.address2}</span></p>
+              {userData.address2 && <p className="field-detail">Street Address2: <span>{userData.address2}</span></p>}
               <p className="field-detail">City: <span>{userData.city}</span></p>
               <p className="field-detail">State: <span>{userData.state}</span></p>
               <p className="field-detail">Zip: <span>{userData.zipCode}</span></p>

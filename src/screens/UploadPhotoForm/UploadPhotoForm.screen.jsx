@@ -1,12 +1,14 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useContext, useEffect} from 'react';
 import Dropzone from 'react-dropzone';
 import CloudIcon from '../../assets/images/cloud-computing.png';
+import {UserContext} from '../../contexts/userContext';
 import { PhotoUploadFormContainer, StyledDiv, MediaPreview } from './UploadPhotoForm.styles';
 
 const PhotoUploadForm = () => {
     const [isError, setIsError] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [thumb, setThumb] = useState([]);
+    const userData = useContext(UserContext);
 
     const onDrop = useCallback(acceptedFiles => {
         // Do something with the files
@@ -16,6 +18,10 @@ const PhotoUploadForm = () => {
             setThumb(prevState => [...prevState, Object.assign(file, { preview: URL.createObjectURL(file) })])
         );
     }, []);
+
+    useEffect(() => {
+        userData.setThumbLength(thumb.length);
+    }, [userData, thumb])
 
     const onDropReject = useCallback(acceptedFiles => {
         // Do something with the files
@@ -41,6 +47,7 @@ const PhotoUploadForm = () => {
 
     return (
         <PhotoUploadFormContainer>
+            <div className='price-info'>$10 per image</div>
             <Dropzone multiple={true} maxSize={4000000} onDropAccepted={onDrop} onDropRejected={onDropReject} accept=".png, .jpeg, .jpg">
                 {({getRootProps, getInputProps}) => (
                     <StyledDiv className={isError ? 'upload-err' : ''} {...getRootProps({ refKey: 'innerRef' })}>

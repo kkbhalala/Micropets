@@ -39,7 +39,7 @@ const LaunchForm = () => {
 
     const validateDetails = () =>{
         let isValid = false;
-        if(firstName && lastName && address1 && address2 && city && state && zipCode && (email && validateEmail())){
+        if(firstName && lastName && address1 && city && state && zipCode && (email && validateEmail())){
             isValid = true;
         }
         return isValid;

@@ -12,6 +12,16 @@ flex-direction: column;
 height: 100%;
 width: 100%;
 flex: 1;
+
+    .price-info {
+        padding: 8px;
+        margin-bottom: 10px;
+        background: white;
+        color: black;
+        border-radius: 10px;
+        text-align: center;
+    }
+
     .error-text {
         font-size: 18px;
         color: red;
