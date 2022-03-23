@@ -16,7 +16,7 @@ const PromocodeContainer = () => {
                 <span>Promo Code</span>
                 <Input required type='text' onChange={handlePromoChange} label='Promo Code' name='promo' value={promoCode} />
             </div>
-            <CustomButton  type='button'  > Verify Promo Code </CustomButton>
+            <CustomButton  type='button'> Verify Promo Code </CustomButton>
         </PromoContainer>
     )
 }

@@ -12,6 +12,7 @@ export const PromoContainer = styled.div`
 
     }
     button {
-        width: 100%;
+        width: 50%;
+        margin: auto;
     }
 `;

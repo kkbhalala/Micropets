@@ -51,9 +51,9 @@ export const StripeFormContainer = styled.div`
         color: #000;
         font-weight: 600;
         cursor: pointer;
-        width: auto;
         padding: 10px 20px;
-        width: 100%;
+        width: 50%;
+        margin: auto;
         margin-top: 20px;
 
         &:disabled {

@@ -1,6 +1,7 @@
 import React from "react";
 import Checkbox from '../Checkbox/Checkbox.component';
-import { UserDashboardContainer } from "./UserDashboard.styles";
+import { UserDashboardContainer, DashboardImagesContainer } from "./UserDashboard.styles";
+import { CustomButton } from "../CustomButton/CustomButton.component";
 
 
 const data = [
@@ -35,13 +36,19 @@ const data = [
 export const UserDashboard = () => {
     return(
         <UserDashboardContainer>
-            {data.map(img => (
-                <div className="img-card">
-                    <img src={img} alt={img} />
-                    <Checkbox  
-                    />
-                </div>
-            ))}
+            <DashboardImagesContainer>
+                {data.map(img => (
+                    <div className="img-card">
+                        <img src={img} alt={img} />
+                        <Checkbox  
+                        />
+                    </div>
+                ))}
+            </DashboardImagesContainer>
+            <div className="btn-wrp">
+                <CustomButton  type='button'> Batch Reject </CustomButton>
+                <CustomButton  type='button'> Batch Confirm </CustomButton>
+            </div>
         </UserDashboardContainer>
     )
 }
