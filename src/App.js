@@ -39,7 +39,10 @@ function App() {
         />  <
         Route exact path = '/dashboard'
         element = { < AdminDashboard / > }
-        /> <
+        />   <
+        Route exact path = '/school-onboard'
+        element = { < AdminDashboard / > }
+        />   <
         Route exact path = '/partnered-school'
         element = { < PartneredSchool / > }
         />   < /

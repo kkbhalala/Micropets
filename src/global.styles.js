@@ -21,10 +21,8 @@ export const GlobalStyle = createGlobalStyle `
 		padding: 11px 15px 11px 0;
 	}
 	.btn-back {
-		position: absolute;
-		// padding: 8px 15px;
-		top: 10px;
-		left: 30px;
+		width: 165px;
+		margin-bottom: 20px;
 		background-color: #fff;
 	}
 

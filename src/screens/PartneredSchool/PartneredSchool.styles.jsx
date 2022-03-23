@@ -8,6 +8,12 @@ export const PartneredSchoolFormContainer = styled.div`
     flex-direction: column;
     margin: 20px;
 
+    .btn-back {
+        position: absolute;
+        top: 10px;
+		left: 30px;
+    }
+
     .login-form{
         width: 40%;
         padding: 30px;

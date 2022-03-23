@@ -90,8 +90,7 @@ const LaunchForm = () => {
 
     return (
         <PageMainContainer>
-            <CustomButton onClick={() => navigate('/')} className="btn-back" to="/">Back</CustomButton>
-            <ImageContainer />
+            <ImageContainer isBackButton/>
             <LaunchFormContainer>
                 <div className="form-container">
                     <Typography>

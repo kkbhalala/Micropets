@@ -7,8 +7,8 @@ export const CheckboxContainer = styled.div`
 
     .styled-checkbox {
         position: relative;
-        width: 2em;
-        height: 2em;
+        min-width: 2em;
+        min-height: 2em;
         color: #000;
         border: 1px solid #bdc1c6;
         border-radius: 4px;
@@ -16,7 +16,7 @@ export const CheckboxContainer = styled.div`
         outline: 0;
         cursor: pointer;
         transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
-        margin: 0;
+        margin-right: 20;
     
         &::before {
             position: absolute;
@@ -49,7 +49,7 @@ export const CheckboxContainer = styled.div`
     label {
         position: relative;
         cursor: pointer;
-        font-size: 1em;
+        font-size: .825em;
         font-weight: 600;
         padding: 0 0.25em 0;
         user-select: none;

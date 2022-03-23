@@ -1,11 +1,11 @@
 import React from "react";
 import { CheckboxContainer } from './Checkbox.styles';
 
-const Checkbox = ({checkBoxChange, checkboxChecked}) => {
+const Checkbox = ({checkBoxChange, checkboxChecked, label, type }) => {
     return(
         <CheckboxContainer>
-            <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" onChange={checkBoxChange} value={checkboxChecked} />
-            <label htmlFor="styled-checkbox-1">Have a promocode?</label>
+            <input data-type={type} className="styled-checkbox" id="styled-checkbox-1" type="checkbox" onChange={checkBoxChange} value={checkboxChecked} />
+            {label && <label htmlFor="styled-checkbox-1">{label}</label>}
         </CheckboxContainer>
     )
 }

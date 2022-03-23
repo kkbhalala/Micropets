@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import Dropzone from 'react-dropzone';
 import CloudIcon from '../../assets/images/cloud-computing.png';
-import { PhotoUploadFormContainer, StyledDiv } from './UploadPhotoForm.styles';
+import { PhotoUploadFormContainer, StyledDiv, MediaPreview } from './UploadPhotoForm.styles';
 
 const PhotoUploadForm = () => {
     const [isError, setIsError] = useState('');
@@ -12,7 +12,9 @@ const PhotoUploadForm = () => {
         // Do something with the files
         setIsError(false);
         setErrorMessage('');
-        setThumb(acceptedFiles.map(file => Object.assign(file, { preview: URL.createObjectURL(file) })));
+        acceptedFiles.map(file => 
+            setThumb(prevState => [...prevState, Object.assign(file, { preview: URL.createObjectURL(file) })])
+        );
     }, []);
 
     const onDropReject = useCallback(acceptedFiles => {
@@ -30,37 +32,43 @@ const PhotoUploadForm = () => {
             default: break;
         }
         setErrorMessage(errorMessage);
-        setThumb([]);
+        // setThumb([]);
       }, []);
+
+    const removeImage = (index) => {
+        setThumb(prevState => prevState.filter((thumb,i) => i !== index));
+    }
+
     return (
         <PhotoUploadFormContainer>
-        <br/>
-        <Dropzone multiple={false} maxSize={4000000} onDropAccepted={onDrop} onDropRejected={onDropReject} accept=".png, .jpeg, .jpg">
-            {({getRootProps, getInputProps}) => (
-                <StyledDiv className={isError ? 'upload-err' : ''} {...getRootProps({ refKey: 'innerRef' })}>
-                    <input {...getInputProps()} />
-                    {!thumb.length && 
+            <Dropzone multiple={true} maxSize={4000000} onDropAccepted={onDrop} onDropRejected={onDropReject} accept=".png, .jpeg, .jpg">
+                {({getRootProps, getInputProps}) => (
+                    <StyledDiv className={isError ? 'upload-err' : ''} {...getRootProps({ refKey: 'innerRef' })}>
+                        <input {...getInputProps()} />
                         <div className='drag-drop-file-wrp'>
                             <img className='cloud-upload-icon' src={CloudIcon} alt="upload-icon" />
                             <p>
-                                Drag 'n' drop some files here 
+                                Drag 'n' drop one or more files here 
                                 <br /> 
                                 or 
                                 <br />
-                                <button className='btn-select-file'>Select File</button>
-                            </p>
-                            
+                                <button className='btn-select-file'>Select One Or More Files</button>
+                            </p>                            
                         </div>
-                    }                   
-                    <div className="media-preview">
-                        {thumb.map(file => (
-                            <img src={file.preview} alt="preview" />
-                        ))}
+                    </StyledDiv>
+                )}
+            </Dropzone>
+            {isError && <span className='error-text'>{errorMessage}</span>}
+            <MediaPreview>
+                {thumb.map((file, i) => (
+                    <div className='thumbnail-preview'>
+                        <img src={file.preview} alt="preview" />
+                        <div className='remove-icon'>
+                            <span role="presentation" onClick={() => removeImage(i)}>X</span>
+                        </div>
                     </div>
-                </StyledDiv>
-            )}
-        </Dropzone>
-        {isError && <span className='error-text'>{errorMessage}</span>}
+                ))}
+            </MediaPreview>
         <br/>
         </PhotoUploadFormContainer>
     )
