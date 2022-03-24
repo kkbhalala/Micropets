@@ -47,7 +47,7 @@ export const UserDashboard = () => {
             </DashboardImagesContainer>
             <div className="btn-wrp">
                 <CustomButton  type='button'> Batch Reject </CustomButton>
-                <CustomButton  type='button'> Batch Confirm </CustomButton>
+                <CustomButton  type='button'> Confirm Selection </CustomButton>
             </div>
         </UserDashboardContainer>
     )

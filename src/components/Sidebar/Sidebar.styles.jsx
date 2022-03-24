@@ -5,6 +5,7 @@ export const SidebarContainer = styled.div`
     width: 250px;
     background-color: rgb(107, 0, 155);
     padding: 40px 20px;
+    flex-shrink: 0;
 
     a {
         display: block;
